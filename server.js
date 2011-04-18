@@ -1,4 +1,4 @@
- (function() {
+(function() {
   var app, prooferb;
   app = require('express').createServer();
   prooferb = require('./prooferb');

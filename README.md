@@ -12,4 +12,4 @@ mentioned the idea to me and then left without implementing it. If this is you,
 [email me](mailto:richard@frankel.tv?subject=prooferb%20credit) so I can give
 you credit for the idea.
 
-This code is (C) Richard Frankel 2011 and released under the MIT license.
+Copyright Richard Frankel 2011.  Code released under the MIT license.

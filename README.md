@@ -8,7 +8,11 @@ allow the graph to grow...but the app will also consume more memory. Nothing
 resembling cleverness, elegance, or even basic human decency is done to mitigate
 this. If you restart the server (or the app crashes due to going out of memory,
 which can definitely happen), proofs will be slow again, because there is no
-persistence backend right now.
+persistence backend right now. Oh, and Google might temporarily block you from
+Google Suggest if they notice you sending a lot of requests to the (unofficial,
+unsupported) Google Suggest API. If this happens, it will affect your normal
+Google searches (they'll work, but you won't get completion suggestions, and
+Google Instant will probably break too). Have fun!
 
 This idea was taken from someone at the HackNY Spring 2011 Hackathon, who
 mentioned the idea to me and then left without implementing it. If this is you,

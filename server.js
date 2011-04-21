@@ -5,7 +5,7 @@
   try {
     coffeekup = require('coffeekup');
   } catch (error) {
-    coffeekup = require('./npm_bin/coffeekup');
+    coffeekup = require('./.npm_bin/coffeekup');
   }
   app.register('.coffee', require('coffeekup'));
   app.set('view engine', 'coffee');

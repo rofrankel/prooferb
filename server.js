@@ -2,18 +2,25 @@
   var app, prooferb;
   app = require('express').createServer();
   prooferb = require('./prooferb');
+  app.register('.coffee', require('coffeekup'));
+  app.set('view engine', 'coffee');
+  app.set('view options', {
+    layout: false
+  });
   app.get('/', function(req, res) {
-    return res.send('Welcome to Prooferb.  Go to /a/b to generate a proof of the equivalence of \'a\' and \'b\'.<br><br>For example, visit <a href="/money/awesome">/money/awesome</a> to prove that money is awesome.');
+    return res.render('home');
   });
   app.get('/:start/:goal', function(req, res) {
     var path;
     return path = prooferb.path(req.params.start, req.params.goal, function(path) {
-      var proof;
       if (res.finished) {
         return;
       }
-      proof = prooferb.to_proof(path);
-      return res.send(proof);
+      return res.render('proof', {
+        context: {
+          path: path
+        }
+      });
     });
   });
   app.listen(9511);

@@ -1,10 +1,7 @@
 app = require('express').createServer()
 prooferb = require './prooferb'
 
-try
-    coffeekup = require 'coffeekup'
-catch error
-    coffeekup = require './.npm_bin/coffeekup'
+coffeekup = require 'coffeekup'
     
 
 app.register('.coffee', require 'coffeekup')

@@ -1,7 +1,7 @@
 app = require('express').createServer()
 prooferb = require './prooferb'
 
-coffeekup = require 'coffeekup'
+coffeekup = require './vendor/coffeekup/coffeekup'
     
 
 app.register('.coffee', require 'coffeekup')

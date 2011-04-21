@@ -3,7 +3,7 @@
   app = require('express').createServer();
   prooferb = require('./prooferb');
   coffeekup = require('./vendor/coffeekup/coffeekup');
-  app.register('.coffee', require('coffeekup'));
+  app.register('.coffee', coffeekup);
   app.set('view engine', 'coffee');
   app.set('view options', {
     layout: false

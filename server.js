@@ -1,7 +1,12 @@
 (function() {
-  var app, prooferb;
+  var app, coffeekup, prooferb;
   app = require('express').createServer();
   prooferb = require('./prooferb');
+  try {
+    coffeekup = require('coffeekup');
+  } catch (error) {
+    coffeekup = require('./npm_bin/coffeekup');
+  }
   app.register('.coffee', require('coffeekup'));
   app.set('view engine', 'coffee');
   app.set('view options', {
